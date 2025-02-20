@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+            color: black;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+            position: relative;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .toggle-password {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 38px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .switch {
+            margin-top: 20px;
+            cursor: pointer;
+            color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="login-container">
+	<img src = "C:\Users\shrey\OneDrive\Pictures\Presentation1 - PowerPoint 19-02-2025 12_33_22.png" alt = "Woxsen University" width = 150px height= 100px >
+	<div class="logo"></div>
+        <h1> UniWox </h1>
+        <p>A blend of "University" and "Woxsen."</p>
+        <h2>Login</h2>
+        <div class="input-group">
+            <label for="university email"> University Email</label>
+            <input type="email" id="email" placeholder="Enter your university email">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <i class="fa fa-eye toggle-password" onclick="togglePassword('password')"></i>
+        </div>
+        <button class="btn">Sign In</button>
+        <p class="switch" onclick="toggleForm()">Don't have an account? Register</p>
+    </div>
+
+    <div class="container" id="register-container" style="display: none;">
+        <h2>Register</h2>
+        <div class="input-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Enter your name">
+        </div>
+        <div class="input-group">
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" placeholder="Enter your university email">
+        </div>
+        <div class="input-group">
+            <label for="register-password">Password</label>
+            <input type="password" id="register-password" placeholder="Enter your password">
+            <i class="fa fa-eye toggle-password" onclick="togglePassword('register-password')"></i>
+        </div>
+        <div class="input-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password">
+            <i class="fa fa-eye toggle-password" onclick="togglePassword('confirm-password')"></i>
+        </div>
+        <button class="btn">Register</button>
+        <p class="switch" onclick="toggleForm()">Already have an account? Login</p>
+    </div>
+
+    <script>
+        function togglePassword(id) {
+            let input = document.getElementById(id);
+            input.type = input.type === "password" ? "text" : "password";
+        }
+        function toggleForm() {
+            let login = document.getElementById('login-container');
+            let register = document.getElementById('register-container');
+            if (login.style.display === "none") {
+                login.style.display = "block";
+                register.style.display = "none";
+            } else {
+                login.style.display = "none";
+                register.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

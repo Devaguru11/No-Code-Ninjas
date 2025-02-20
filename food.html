@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .dashboard-header {
+            background-color: #d9534f;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .card-custom {
+            background-color: #212529;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .info-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            color: black;
+        }
+        .food-section {
+            display: flex;
+            gap: 15px;
+        }
+        .food-card {
+            flex: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .food-card p {
+            color: #d9534f;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">Food Dashboard</div>
+    <div class="container mt-4">
+        <div class="card-custom">
+            <div class="info-box">
+                <h5>Welcome to Campus Dining</h5>
+                <p>Explore your food options</p>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <h5 class="text-white">Today's Food Options</h5>
+            <div class="food-section">
+                <div class="food-card">
+                    <h6>Oval - Menu</h6>
+                    <p>Explore available meals</p>
+                </div>
+                <div class="food-card">
+                    <h6>SmartQ - Order Food</h6>
+                    <p>Skip the queue, order online</p>
+                </div>
+            </div>
+        </div>
+        <a href="categories.html" class="btn btn-secondary mt-3">Back to Categories</a>
+
+    </div>
+</body>
+</html>

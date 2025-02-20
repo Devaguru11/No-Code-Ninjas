@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .dashboard-header {
+            background-color: #d9534f;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .card-custom {
+            background-color: #212529;
+            color: white;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .facility-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .facility-box h5 {
+            font-weight: bold;
+        }
+        .facility-box a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">Transportation</div>
+    
+    <div class="container mt-3">
+        <div class="card-custom">
+            <h4>Welcome to Transportation Facilities</h4>
+            <p>Explore services such as Outing Permission and Bus Booking.</p>
+        </div>
+
+        <h5 class="text-white">Available Services</h5>
+        
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="facility-box">
+                    <i class="fas fa-walking text-primary fa-2x"></i>
+                    <h5>Outing Permission</h5>
+                    <p>Request permission for outings easily.</p>
+                    <a href="outing-permission.html" class="text-primary">Request Outing</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="facility-box">
+                    <i class="fas fa-bus text-success fa-2x"></i>
+                    <h5>Bus Booking</h5>
+                    <p>Book campus transportation conveniently.</p>
+                    <a href="bus-booking.html" class="text-success">Book a Bus</a>
+                </div>
+            </div>
+        </div>
+        <a href="categories.html" class="btn btn-secondary mt-3">Back to Categories</a>
+    </div>
+</body>
+</html>
